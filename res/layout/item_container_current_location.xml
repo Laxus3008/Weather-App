@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textCurrentDate"
+        android:textColor="@color/sonic_silver"
+        android:textSize="@dimen/_10ssp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        app:layout_constraintEnd_toStartOf="@id/imageCurrentLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Today, 15 july, 2024"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:id="@+id/imageLocation"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:src="@drawable/location_on"
+        android:tint="@color/sonic_silver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCurrentDate"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textCurrentLocation"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/raisin_black"
+        android:textSize="@dimen/_12ssp"
+        android:text="Allahabad, Uttar Pradest, India"
+        app:layout_constraintEnd_toStartOf="@id/imageCurrentLocation"
+        app:layout_constraintBottom_toBottomOf="@id/imageLocation"
+        app:layout_constraintStart_toEndOf="@id/imageLocation"
+        app:layout_constraintTop_toTopOf="@id/imageLocation"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:id="@+id/imageCurrentLocation"
+        android:src="@drawable/my_location"
+        android:tint="@color/sonic_silver"
+        app:layout_constraintBottom_toBottomOf="@id/imageLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textCurrentDate"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
